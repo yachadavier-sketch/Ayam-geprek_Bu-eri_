@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Geprek Bu Eri</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="area">
+
+<div class="navbar">
+
+<div class="logo">
+🔥 Geprek Bu Eri
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="content-cart">
+
+<select class="selection-dropdown">
+
+<option selected>
+Take Away
+</option>
+
+</select>
+
+<div class="cashier">
+
+<i class='bx bxs-user'></i>
+
+Bu Eri
+
+</div>
+
+<div class="cartlist-border">
+
+<div class="cartlist"></div>
+
+</div>
+
+<div class="clear-all"
+onclick="clearall()">
+
+<i class='bx bxs-trash-alt'></i>
+
+<span>Clear All</span>
+
+</div>
+
+<div class="cart-display-text">
+
+<div class="display-row">
+
+<p>Amount</p>
+
+<p id="amount-text">
+Rp 0
+</p>
+
+</div>
+
+<div class="display-row total-row">
+
+<p>Total</p>
+
+<p id="total-text">
+Rp 0
+</p>
+
+</div>
+
+<div class="display-row">
+
+<p>Cash</p>
+
+<input
+type="number"
+id="int-cash"
+placeholder="Masukkan uang">
+
+</div>
+
+<div class="display-row change-row">
+
+<p>Kembalian</p>
+
+<p id="change-text">
+Rp 0
+</p>
+
+</div>
+
+</div>
+
+<button class="button-payment"
+onclick="saveAndPrint()">
+
+<i class='bx bx-printer'></i>
+
+Payment + Print
+
+</button>
+
+<button class="button-payment payment-no-print"
+onclick="saveWithoutPrint()">
+
+<i class='bx bx-check-circle'></i>
+
+Payment Tanpa Print
+
+</button>
+
+</div>
+
+<div class="content-item">
+
+<div class="itembar">
+
+<div class="item-title">
+
+<i class='bx bxs-cart bx-sm'
+onclick="cartbtn()"></i>
+
+<p>Menu</p>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+class="input-search"
+placeholder="Cari menu...">
+
+<i class='bx bx-search-alt-2 bx-md'
+onclick="bar()"></i>
+
+<i class='bx bx-sort bx-md'
+onclick="sort()"></i>
+
+</div>
+
+</div>
+
+<div class="itemlist-border">
+
+<div class="itemlist"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="bottombar">
+
+<div class="ready">
+Ready
+</div>
+
+</div>
+
+</div>
+
+<div class="history-box">
+
+<h2>📒 Histori Penjualan</h2>
+
+<div class="history-filter">
+
+<input
+type="date"
+id="history-date">
+
+<button onclick="filterHistory()">
+Cari
+</button>
+
+</div>
+
+<div id="history-list"></div>
+
+</div>
+
+<div class="print-struk">
+
+<div class="struk-header">
+
+<h2>Ayam Geprek Bu Eri</h2>
+
+<p>
+Jl. Parang Klitik Raya, Tlogosari Kulon
+Kec. Pedurungan, Kota Semarang
+</p>
+
+<p>Take Away</p>
+
+</div>
+
+<div class="line">
+=========================
+</div>
+
+<div class="row">
+
+<span>Kasir</span>
+
+<span>Bu Eri</span>
+
+</div>
+
+<div class="row">
+
+<span>Tanggal</span>
+
+<span id="inf-datetime"></span>
+
+</div>
+
+<div class="line">
+=========================
+</div>
+
+<div class="item"></div>
+
+<div class="line">
+=========================
+</div>
+
+<div class="price">
+
+<div class="row">
+
+<span>Amount</span>
+
+<span id="price-amount"></span>
+
+</div>
+
+<div class="row">
+
+<span>Total</span>
+
+<span id="price-total"></span>
+
+</div>
+
+<div class="row">
+
+<span>Cash</span>
+
+<span id="price-cash"></span>
+
+</div>
+
+<div class="row">
+
+<span>Kembalian</span>
+
+<span id="price-change"></span>
+
+</div>
+
+</div>
+
+<div class="line">
+=========================
+</div>
+
+<div class="thanks">
+TERIMA KASIH 🙏
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
