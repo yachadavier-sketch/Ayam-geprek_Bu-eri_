@@ -32,7 +32,7 @@ var dataitem = [
 
   {
     name:'Paket Sambal Mix + Es',
-    img:'assets/Paket Sambal mix+es.jpeg',
+    img:'assets/mix.jpeg',
     price:13000
   },
 
